@@ -1,27 +1,49 @@
-.cabecalhoPrincipal .container{
+/* HEADER */
+.cabecalhoPrincipal .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.cabecalhoPrincipal-nav{
+.cabecalhoPrincipal-nav {
     display: flex;
 }
 
-.rodapePrincipal-patrocinadores .container{
+/* CONTEÚDO PRINCIPAL */
+.conteudoPrincipal-cursos {
+    display: flex;
+    flex-flow: wrap;
+}
+
+.conteudoPrincipal-cursos-link {
+    width: 23%;
+    margin: 1%;
+}
+
+.conteudoPrincipal-cursos-link:nth-child(4n) {
+    margin-right: 0;
+}
+
+.conteudoPrincipal-cursos-link:nth-child(4n + 1) {
+    margin-left: 0;
+}
+
+/* RODAPÉ */
+.rodapePrincipal-patrocinadores .container {
     display: flex;
     justify-content: space-between;
 }
 
-.rodapePrincipal-patrocinadores .rodapePrincipal-patrocinadores-list{
+.rodapePrincipal-patrocinadores .rodapePrincipal-patrocinadores-list {
     display: flex;
     align-items: center;
-    justify-content: space-around; 
+    justify-content: space-around;
     width: 70%;
     margin-left: 5%;
 }
 
-.rodapePrincipal-navMap-list{
+/* MAPA LISTA */
+.rodapePrincipal-navMap-list {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -29,10 +51,70 @@
     height: 250px;
 }
 
-.rodapePrincipal-contatoForm{
+.rodapePrincipal-contatoForm {
     width: 25%;
 }
 
-.rodapePrincipal-contatoForm-fieldset{
+.rodapePrincipal-contatoForm-fieldset {
     display: flex;
+}
+
+@media screen and (max-width: 768px) {
+    /* PARTE MOBILE */
+
+    /* HEADER - MOBILE */
+    .cabecalhoPrincipal-nav {
+        flex-flow: column;
+    }
+
+    .cabecalhoPrincipal .container {
+        flex-flow: column;
+        align-items: initial;
+    }
+    .cabecalhoPrincipal .container a,
+    .cabecalhoPrincipal .container h1 {
+        text-align: center;
+    }
+
+    /* MAIN - MOBILE */
+    .conteudoPrincipal-cursos {
+        flex-flow: column wrap;
+    }
+
+    .conteudoPrincipal-cursos-link {
+        width: 100%;
+    }
+
+    /* NAV MAP LIST - MOBILE */
+    .rodapePrincipal-navMap-list {
+        height: auto;
+    }
+
+    /* RODAPÉ - MOBILE */
+    .rodapePrincipal-patrocinadores {
+        flex-flow: column;
+    }
+
+    .rodapePrincipal-patrocinadores .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .rodapePrincipal-patrocinadores-list,
+    .rodapePrincipal-contatoForm {
+        width: 100%;
+        margin: 0;
+    }
+
+    .rodapePrincipal-patrocinadores-list li {
+        margin: 3%;
+    }
+
+    .rodapePrincipal-contatoForm-fieldset {
+        justify-content: center;
+    }
+
+    .rodapePrincipal-contatoForm-legend {
+        text-align: center;
+    }
 }
